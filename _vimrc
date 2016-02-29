@@ -174,6 +174,41 @@ iabbrev fej for(int j = 0; j < _; j++)
 iabbrev fek for(int k = 0; k < _; k++)
 
 
+iabbrev feiu16 for(u16 i = 0; i < _; i++)
+iabbrev feju16 for(u16 j = 0; j < _; j++)
+iabbrev feku16 for(u16 k = 0; k < _; k++)
+
+iabbrev feiu32 for(u32 i = 0; i < _; i++)
+iabbrev feju32 for(u32 j = 0; j < _; j++)
+iabbrev feku32 for(u32 k = 0; k < _; k++)
+
+iabbrev feiu64 for(u64 i = 0; i < _; i++)
+iabbrev feju64 for(u64 j = 0; j < _; j++)
+iabbrev feku64 for(u64 k = 0; k < _; k++)
+
+
+iabbrev fei16 for(s16 i = 0; i < _; i++)
+iabbrev fej16 for(s16 j = 0; j < _; j++)
+iabbrev fek16 for(s16 k = 0; k < _; k++)
+iabbrev feis16 for(s16 i = 0; i < _; i++)
+iabbrev fejs16 for(s16 j = 0; j < _; j++)
+iabbrev feks16 for(s16 k = 0; k < _; k++)
+
+iabbrev fei32 for(s32 i = 0; i < _; i++)
+iabbrev fej32 for(s32 j = 0; j < _; j++)
+iabbrev fek32 for(s32 k = 0; k < _; k++)
+iabbrev feis32 for(s32 i = 0; i < _; i++)
+iabbrev fejs32 for(s32 j = 0; j < _; j++)
+iabbrev feks32 for(s32 k = 0; k < _; k++)
+
+iabbrev fei64 for(s64 i = 0; i < _; i++)
+iabbrev fej64 for(s64 j = 0; j < _; j++)
+iabbrev fek64 for(s64 k = 0; k < _; k++)
+iabbrev feis64 for(s64 i = 0; i < _; i++)
+iabbrev fejs64 for(s64 j = 0; j < _; j++)
+iabbrev feks64 for(s64 k = 0; k < _; k++)
+
+
 iabbrev ret return
 
 
