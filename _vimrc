@@ -173,7 +173,6 @@ iabbrev fei for(int i = 0; i < _; i++)
 iabbrev fej for(int j = 0; j < _; j++)
 iabbrev fek for(int k = 0; k < _; k++)
 
-
 iabbrev feiu16 for(u16 i = 0; i < _; i++)
 iabbrev feju16 for(u16 j = 0; j < _; j++)
 iabbrev feku16 for(u16 k = 0; k < _; k++)
@@ -209,8 +208,48 @@ iabbrev fejs64 for(s64 j = 0; j < _; j++)
 iabbrev feks64 for(s64 k = 0; k < _; k++)
 
 
-iabbrev ret return
+iabbrev fex for(int x = 0; x < _; x++)
+iabbrev fey for(int y = 0; x < _; x++)
+iabbrev fez for(int z = 0; x < _; x++)
 
+iabbrev fexu16 for(u16 x = 0; x < _; x++)
+iabbrev feyu16 for(u16 y = 0; x < _; x++)
+iabbrev fezu16 for(u16 z = 0; x < _; x++)
+
+iabbrev fexu32 for(u32 x = 0; x < _; x++)
+iabbrev feyu32 for(u32 y = 0; x < _; x++)
+iabbrev fezu32 for(u32 z = 0; x < _; x++)
+
+iabbrev fexu64 for(u64 x = 0; x < _; x++)
+iabbrev feyu64 for(u64 y = 0; x < _; x++)
+iabbrev fezu64 for(u64 z = 0; x < _; x++)
+
+
+iabbrev fex16 for(s16 x = 0; x < _; x++)
+iabbrev fey16 for(s16 y = 0; x < _; x++)
+iabbrev fez16 for(s16 z = 0; x < _; x++)
+iabbrev fexs16 for(s16 x = 0; x < _; x++)
+iabbrev feys16 for(s16 y = 0; x < _; x++)
+iabbrev fezs16 for(s16 z = 0; x < _; x++)
+
+iabbrev fex32 for(s32 x = 0; x < _; x++)
+iabbrev fey32 for(s32 y = 0; x < _; x++)
+iabbrev fez32 for(s32 z = 0; x < _; x++)
+iabbrev fexs32 for(s32 x = 0; x < _; x++)
+iabbrev feys32 for(s32 y = 0; x < _; x++)
+iabbrev fezs32 for(s32 z = 0; x < _; x++)
+
+iabbrev fex64 for(s64 x = 0; x < _; x++)
+iabbrev fey64 for(s64 y = 0; x < _; x++)
+iabbrev fez64 for(s64 z = 0; x < _; x++)
+iabbrev fexs64 for(s64 x = 0; x < _; x++)
+iabbrev feys64 for(s64 y = 0; x < _; x++)
+iabbrev fezs64 for(s64 z = 0; x < _; x++)
+
+iabbrev ret return
+iabbrev main int main(int argc, char* argv[])
+
+" TODO(rayalan): add abbrevs for C/C++ std includes 
 
 "abbrev fex for(int k = 0; k < size; k++)
 "iabbrev fey for(int k = 0; k < size; k++)
