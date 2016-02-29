@@ -122,10 +122,6 @@ autocmd VimEnter * :rightbelow vnew
 autocmd VimEnter * :wincmd h   
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TODO(rayalan): AUTO CORRECT
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TODO(rayalan): SOUND
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -165,3 +161,22 @@ map <leader>cd :lcd %:p:h<cr>
 " macros? 
 map <leader>t :startinsert!<cr>// TODO(rayalan): <cr><bs>
 map <leader>n :startinsert!<cr>// NOTE(rayalan): <cr><bs>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TODO(rayalan): AUTO CORRECT
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TODO(rayalan): fix set of macros like these
+"   and make them specific to c/c++ file types
+"   add more for loop types 
+"   add user types 
+iabbrev fei for(int i = 0; i < _; i++)
+iabbrev fej for(int j = 0; j < _; j++)
+iabbrev fek for(int k = 0; k < _; k++)
+
+
+iabbrev ret return
+
+
+"abbrev fex for(int k = 0; k < size; k++)
+"iabbrev fey for(int k = 0; k < size; k++)
+"iabbrev fez for(int k = 0; k < size; k++)
