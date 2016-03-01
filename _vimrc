@@ -162,6 +162,12 @@ map <leader>cd :lcd %:p:h<cr>
 map <leader>t :startinsert!<cr>// TODO(rayalan): <cr><bs>
 map <leader>n :startinsert!<cr>// NOTE(rayalan): <cr><bs>
 
+" leader _ search back for _ (useful for loop abbrevs)
+" TODO(rayalan): should I make this replace _ with word 
+" under cursor? 
+map <leader>_ ?_<cr>
+map _ ?_<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TODO(rayalan): AUTO CORRECT
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -170,7 +176,7 @@ map <leader>n :startinsert!<cr>// NOTE(rayalan): <cr><bs>
 "   add more for loop types 
 "   add user types 
 iabbrev fei for(int i = 0; i < _; i++)
-iabbrev fej for(int j = 0; j < _; j++)
+iabbrev fej for(int j = 0; j < _; j++
 iabbrev fek for(int k = 0; k < _; k++)
 
 iabbrev feiu16 for(u16 i = 0; i < _; i++)
