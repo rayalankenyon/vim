@@ -256,6 +256,15 @@ iabbrev ret return
 iabbrev main int main(int argc, char* argv[])
 
 " TODO(rayalan): add abbrevs for C/C++ std includes 
+iabbrev #inc #include
+iabbrev stdio <cstdio>
+iabbrev stdlib <cstdlib>
+iabbrev <ass <cassert>
+iabbrev <mat <cmath>
+iabbrev <ios <iostream>
+iabbrev <ran <random>
+iabbrev <str <string>
+iabbrev <vec <vector>
 
 "abbrev fex for(int k = 0; k < size; k++)
 "iabbrev fey for(int k = 0; k < size; k++)
