@@ -176,7 +176,7 @@ map _ ?_<cr>
 "   add more for loop types 
 "   add user types 
 iabbrev fei for(int i = 0; i < _; i++)
-iabbrev fej for(int j = 0; j < _; j++
+iabbrev fej for(int j = 0; j < _; j++)
 iabbrev fek for(int k = 0; k < _; k++)
 
 iabbrev feiu16 for(u16 i = 0; i < _; i++)
