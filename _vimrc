@@ -155,10 +155,9 @@ map <A-l> <C-w>>
 map <leader>bd :bd!<cr>
 
 " change vim directory to directory of current file
-map <leader>cd :lcd %:p:h<cr>
+map <leader>cd :lcd %:p:h<cr>:pwd<cr>
 
-" TODO(rayalan): figure out proper comment here
-" macros? 
+" insert useful comments 
 map <leader>t :startinsert!<cr>// TODO(rayalan): <cr><bs>
 map <leader>n :startinsert!<cr>// NOTE(rayalan): <cr><bs>
 
@@ -255,17 +254,14 @@ iabbrev fezs64 for(s64 z = 0; x < _; x++)
 iabbrev ret return
 iabbrev main int main(int argc, char* argv[])
 
-" TODO(rayalan): add abbrevs for C/C++ std includes 
-iabbrev #inc #include
-iabbrev stdio <cstdio>
-iabbrev stdlib <cstdlib>
-iabbrev <ass <cassert>
-iabbrev <mat <cmath>
-iabbrev <ios <iostream>
-iabbrev <ran <random>
-iabbrev <str <string>
-iabbrev <vec <vector>
-
-"abbrev fex for(int k = 0; k < size; k++)
-"iabbrev fey for(int k = 0; k < size; k++)
-"iabbrev fez for(int k = 0; k < size; k++)
+" TODO(rayalan): fix these for # and < special symbols
+" abbrevs for C/C++ std includes 
+"iabbrev #inc #include
+"iabbrev stdio <cstdio>
+"iabbrev stdlib <cstdlib>
+"iabbrev <ass <cassert>
+"iabbrev <mat <cmath>
+"iabbrev <ios <iostream>
+"iabbrev <ran <random>
+"iabbrev <str <string>
+"iabbrev <vec <vector>
