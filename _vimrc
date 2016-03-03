@@ -85,6 +85,9 @@ set equalalways
 " change vim's directory to directory of file on startup
 autocmd VimEnter * lcd %:p:h
 
+" disable automatic comments on return, but not on 'o' or auto-wrap
+autocmd BufRead * :set formatoptions-=r
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SEARCH
@@ -119,7 +122,7 @@ endif
 " only after entire Vim initialization
 autocmd VimEnter * :rightbelow vnew
 "move cursor to right window after startup
-autocmd VimEnter * :wincmd h   
+autocmd VimEnter * :wincmd h
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TODO(rayalan): SOUND
@@ -154,7 +157,7 @@ map <A-l> <C-w>>
 " close current buffer 
 map <leader>bd :bd!<cr>
 
-" change vim directory to directory of current file
+" change vim directory to directory of current, print directory
 map <leader>cd :lcd %:p:h<cr>:pwd<cr>
 
 " insert useful comments 
@@ -265,3 +268,11 @@ iabbrev main int main(int argc, char* argv[])
 "iabbrev <ran <random>
 "iabbrev <str <string>
 "iabbrev <vec <vector>
+"
+
+" abbreviations for english
+iabbrev teh the
+iabbrev Teh The
+iabbrev TEh The
+iabbrev THe The
+
