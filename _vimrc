@@ -86,7 +86,7 @@ set equalalways
 autocmd VimEnter * lcd %:p:h
 
 " disable automatic comments on return, but not on 'o' or auto-wrap
-autocmd BufRead * :set formatoptions-=r
+autocmd BufRead * set formatoptions-=r
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
