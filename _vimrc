@@ -173,8 +173,8 @@ map <leader>n :startinsert!<cr>// NOTE(rayalan): <cr><bs>
 " I think it's good to keep underscore just to be obvious
 " about the keybinding
 " <leader>_ might also handle inserting { }
-map <leader>_ ?)<cr>:execute "normal l"<cr>:execute "normal c$"<cr>:execute "normal 3b"<cr>:execute "normal P"<cr>?_<cr>:execute "normal xX"<cr>:execute "normal $"<cr>
-map _ ?)<cr>:execute "normal l"<cr>:execute "normal c$"<cr>:execute "normal 3b"<cr>:execute "normal P"<cr>?_<cr>:execute "normal xX"<cr>:execute "normal $"<cr>
+map <leader>_ :call UnderscoreMacro()<cr>
+map _ :call UnderscoreMacro()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TODO(rayalan): AUTO CORRECT
@@ -280,4 +280,24 @@ iabbrev main int main(int argc, char* argv[])
 iabbrev teh the
 iabbrev Teh The
 iabbrev TEh The
-iabbrev THe The
+iabbrev THe Tha
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TODO(rayalan): FUNCTIONS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" replace _ with everything after ') ' 
+function UnderscoreMacro()
+    " search backwards for )
+    call search(')', 'b')
+    execute "normal l"
+    execute "normal c$"
+    execute "normal 3b"
+    execute "normal P"
+    " search backwards for _
+    call search('_', 'b')
+    execute "normal xX"
+    execute "normal $"
+    return
+endfunction
