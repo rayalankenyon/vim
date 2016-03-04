@@ -173,8 +173,8 @@ map <leader>n :startinsert!<cr>// NOTE(rayalan): <cr><bs>
 " I think it's good to keep underscore just to be obvious
 " about the keybinding
 " <leader>_ might also handle inserting { }
-map <leader>_ :execute "normal ciw"<cr>:execute "normal 3b"<cr>:execute "normal P"<cr>?_<cr>:execute "normal x"<cr>:execute "normal $"<cr>
-map _ ?_<cr>
+map <leader>_ ?)<cr>:execute "normal l"<cr>:execute "normal c$"<cr>:execute "normal 3b"<cr>:execute "normal P"<cr>?_<cr>:execute "normal xX"<cr>:execute "normal $"<cr>
+map _ ?)<cr>:execute "normal l"<cr>:execute "normal c$"<cr>:execute "normal 3b"<cr>:execute "normal P"<cr>?_<cr>:execute "normal xX"<cr>:execute "normal $"<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TODO(rayalan): AUTO CORRECT
