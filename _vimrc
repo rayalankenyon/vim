@@ -125,7 +125,7 @@ autocmd VimEnter * :rightbelow vnew
 autocmd VimEnter * :wincmd h
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TODO(rayalan): SOUND
+" TODO(rayalan): SMOOTH SCROLLING
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -167,7 +167,13 @@ map <leader>n :startinsert!<cr>// NOTE(rayalan): <cr><bs>
 " leader _ search back for _ (useful for loop abbrevs)
 " TODO(rayalan): should I make this replace _ with word 
 " under cursor? 
-map <leader>_ ?_<cr>
+" yes, this is useful
+" fix this so it cuts from ')' to end of line and shorten
+" commands to one normal mode :execute
+" I think it's good to keep underscore just to be obvious
+" about the keybinding
+" <leader>_ might also handle inserting { }
+map <leader>_ :execute "normal ciw"<cr>:execute "normal 3b"<cr>:execute "normal P"<cr>?_<cr>:execute "normal x"<cr>:execute "normal $"<cr>
 map _ ?_<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -275,4 +281,3 @@ iabbrev teh the
 iabbrev Teh The
 iabbrev TEh The
 iabbrev THe The
-
