@@ -154,6 +154,10 @@ map <A-j> <C-W>-
 map <A-k> <C-W>+
 map <A-l> <C-w>>
 
+" remap [ ] to  { } in normal mode
+nmap [ {
+nmap ] }
+
 " close current buffer 
 map <leader>bd :bd!<cr>
 
@@ -175,6 +179,7 @@ map <leader>n :startinsert!<cr>// NOTE(rayalan): <cr><bs>
 " <leader>_ might also handle inserting { }
 map <leader>_ :call UnderscoreMacro()<cr>
 map _ :call UnderscoreMacro()<cr>
+" map <leader>/ :call CommentMacro()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TODO(rayalan): AUTO CORRECT
@@ -300,4 +305,9 @@ function UnderscoreMacro()
     execute "normal xX"
     execute "normal $"
     return
+endfunction
+
+function CommentMacro()
+    execute "normal 0"
+    execute "insert"
 endfunction
