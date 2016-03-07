@@ -83,7 +83,7 @@ set laststatus=2
 set equalalways
 
 " change vim's directory to directory of file on startup
-autocmd VimEnter * lcd %:p:h
+" autocmd VimEnter * lcd %:p:h
 
 " disable automatic comments on return, but not on 'o' or auto-wrap
 autocmd BufRead * set formatoptions-=r
