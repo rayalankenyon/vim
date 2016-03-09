@@ -61,11 +61,6 @@ set number
 set wildmenu
 set wildmode=list:longest,full
 
-" show current command vim is doing
-set showcmd
-set cmdheight=1 
-set ruler
-
 " auto update file when editted in other program
 set autoread
 
@@ -125,8 +120,15 @@ autocmd VimEnter * :rightbelow vnew
 autocmd VimEnter * :wincmd h
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TODO(rayalan): SMOOTH SCROLLING
+" STATUS LINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set showcmd
+set cmdheight=1 
+set ruler
+au VimEnter * hi StatusLine guibg=#0078d7 guifg=white
+au InsertEnter * hi StatusLine guibg=white guifg=black
+au InsertLeave * hi StatusLine guibg=#0078d7 guifg=white
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BINDINGS
