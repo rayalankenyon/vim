@@ -166,10 +166,6 @@ map <leader>bd :bd!<cr>
 " change vim directory to directory of current, print directory
 map <leader>cd :lcd %:p:h<cr>:pwd<cr>
 
-" insert useful comments 
-map <leader>t :startinsert!<cr>// TODO(rayalan): <cr><bs>
-map <leader>n :startinsert!<cr>// NOTE(rayalan): <cr><bs>
-
 " leader _ search back for _ (useful for loop abbrevs)
 " TODO(rayalan): should I make this replace _ with word 
 " under cursor? 
@@ -186,6 +182,15 @@ map _ :call UnderscoreMacro()<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TODO(rayalan): AUTO CORRECT
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" hopefully these work 
+iabbrev TODO TODO(rayalan):
+iabbrev todo TODO(rayalan):
+iabbrev td TODO(rayalan):
+iabbrev nt NOTE(rayalan):
+iabbrev note NOTE(rayalan):
+iabbrev NOTE NOTE(rayalan):
+
+
 " TODO(rayalan): fix set of macros like these
 "   and make them specific to c/c++ file types
 "   add more for loop types 
@@ -288,6 +293,7 @@ iabbrev teh the
 iabbrev Teh The
 iabbrev TEh The
 iabbrev THe Tha
+
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
