@@ -143,18 +143,22 @@ map <leader>v :rightbelow vsplit<cr>
 map <leader>s :rightbelow split<cr>
 " map f5 = save, build, debug
 " map (key) = save, build
+map <F5> :call BuildMacro()<cr>
+map <F10> :call DebugMacro()<cr>
 
 " navigate between buffers with ctrl+direction
+" would like to switch to using vim keys for nav all the time
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " resize buffers with alt+direction
-map <A-h> <C-w><
-map <A-j> <C-W>-
-map <A-k> <C-W>+
-map <A-l> <C-w>>
+" NOTE(rayalan): this was useful, but easier to just use mouse
+"map <A-h> <C-w><
+"map <A-j> <C-W>-
+"map <A-k> <C-W>+
+"map <A-l> <C-w>>
 
 " remap [ ] to  { } in normal mode
 nmap [ {
@@ -177,7 +181,7 @@ map <leader>cd :lcd %:p:h<cr>:pwd<cr>
 " <leader>_ might also handle inserting { }
 map <leader>_ :call UnderscoreMacro()<cr>
 map _ :call UnderscoreMacro()<cr>
-" map <leader>/ :call CommentMacro()<cr>
+"map <leader>/ :call CommentMacro()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TODO(rayalan): AUTO CORRECT
@@ -315,7 +319,18 @@ function UnderscoreMacro()
     return
 endfunction
 
+" TODO(rayalan): make this work to toggle comments on / off
+" TODO(rayalan): make this work for selected region? 
 function CommentMacro()
     execute "normal 0"
     execute "insert"
+endfunction
+
+function BuildMacro() 
+    execute "!build"
+    execute "!run"
+endfunction
+
+function DebugMacro() 
+    execute "!debug"
 endfunction
