@@ -146,12 +146,12 @@ map <leader>s :rightbelow split<cr>
 map <F5> :call BuildMacro()<cr>
 map <F10> :call DebugMacro()<cr>
 
-" navigate between buffers with ctrl+direction
+" navigate between buffers with alt+direction
 " would like to switch to using vim keys for nav all the time
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+map <A-j> <C-W>j
+map <A-k> <C-W>k
+map <A-h> <C-W>h
+map <A-l> <C-W>l
 
 " resize buffers with alt+direction
 " NOTE(rayalan): this was useful, but easier to just use mouse
@@ -160,9 +160,16 @@ map <C-l> <C-W>l
 "map <A-k> <C-W>+
 "map <A-l> <C-w>>
 
-" remap [ ] to  { } in normal mode
-nmap [ {
-nmap ] }
+" move by words with shift+l/h 
+" move by block with shift+j/k 
+map L w
+map H b
+map J )
+map K (
+
+" remap [ ] to  home and endl
+nmap [ 0
+nmap ] $
 
 " close current buffer 
 map <leader>bd :bd!<cr>
