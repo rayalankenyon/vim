@@ -133,6 +133,12 @@ au InsertLeave * hi StatusLine guibg=#0078d7 guifg=white
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BINDINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" enable pro mode
+nmap <Up> <Nop>
+nmap <Down> <Nop>
+nmap <Left> <Nop>
+nmap <Right> <Nop>
+
 " leader 
 let mapleader = ";" 
 let g:mapleader = ";"
