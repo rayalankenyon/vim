@@ -34,6 +34,7 @@ colorscheme spring-pastels
 
 " show matching braces / brackets
 set showmatch
+set mat=2
 
 if has("gui_running")
 	set guifont=Hack:h10:cANSI
@@ -92,6 +93,14 @@ set smartcase
 set hlsearch
 set incsearch
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SOUND
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set noerrorbells
+set novisualbell
+set noeb vb t_vb=
+set vb t_vb=
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " LAYOUT
@@ -133,6 +142,13 @@ au InsertLeave * hi StatusLine guibg=#0078d7 guifg=white
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BINDINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"fix ctrl-backspace
+inoremap <C-BS> <C-\><C-o>db
+
+"proper ctrl-del
+nnoremap <C-Del> dw
+inoremap <silent><C-Del> <ESC>dw
+
 " enable pro mode
 nmap <Up> <Nop>
 nmap <Down> <Nop>
