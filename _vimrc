@@ -124,9 +124,9 @@ endif
 
 " make vsplit to right of opened file
 " only after entire Vim initialization
-autocmd VimEnter * :rightbelow vnew
+"autocmd VimEnter * :rightbelow vnew
 "move cursor to right window after startup
-autocmd VimEnter * :wincmd h
+"autocmd VimEnter * :wincmd h
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
@@ -149,7 +149,6 @@ inoremap <C-BS> <C-\><C-o>db
 nnoremap <C-Del> dw
 inoremap <silent><C-Del> <ESC>dw
 
-" enable pro mode
 nmap <Up> <Nop>
 nmap <Down> <Nop>
 nmap <Left> <Nop>
@@ -363,3 +362,4 @@ endfunction
 function DebugMacro() 
     execute "!debug"
 endfunction
+
